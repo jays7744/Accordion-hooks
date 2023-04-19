@@ -1,12 +1,18 @@
-import { useState } from "react";
+
+ const PanelA = ({toggle,activePanel}) => {
+    
+    return(
+    <div>
+        <h2> Panel A</h2>
+    <button onClick={()=>toggle(1) }>Click</button>
+
+    {activePanel === 1 && (<p>This Is Panel A</p> 
+    )}
 
 
- const PanelA = (props) => {
-
-    return(<>
-    <p>This is Panel A</p>
-    <button onClick={props.toggle}>Click</button>
-    </>
+    </div>
+    
+    
         
     )
    

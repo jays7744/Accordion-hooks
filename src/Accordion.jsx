@@ -4,16 +4,17 @@ import PanelA from "./PanelA"
 import PanelB from "./PanelB"
 
 const Accordion = ()=> {
-    const [activePanel, setActivePanel] = useState();
+    const [activePanel, setActivePanel] = useState(0);
 
-    const toggle =(num) =>{
+    const toggle =(E) =>{
 
-        setActivePanel(num);
+        setActivePanel(E);
     }
 
 return(<>
-    <PanelA toggle={toggle}/>
-    <PanelB/></>
+    <PanelA toggle={toggle} activePanel={activePanel}/>
+    <PanelB toggle={toggle} activePanel={activePanel}/>
+    </>
     
 )
 }
