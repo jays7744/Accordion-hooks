@@ -9,10 +9,12 @@ const Accordion = ()=> {
     const toggle =(E) =>{
 
         setActivePanel(E);
+        console.log(setActivePanel(E))
+        // E.value.target === activePanel
     }
 
 return(<>
-    <PanelA toggle={toggle} activePanel={activePanel}/>
+    <PanelA toggle={toggle} activePanel={activePanel }/>
     <PanelB toggle={toggle} activePanel={activePanel}/>
     </>
     

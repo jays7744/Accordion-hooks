@@ -2,15 +2,13 @@
 const PanelB = ({toggle,activePanel}) => {
 
 
-    return(<>
+    return (<>
         <h2>Panel B</h2>
-        <button onClick={()=>toggle(2)}>Click</button>
 
-        {activePanel === 2 && (<p>This is Panel B</p>
-        )}
-        
-        </>
-    )
-   
+        {activePanel === 2 && (<p>This is Panel B</p> )}
+
+        <button onClick={() => toggle(activePanel === 2 ? 0 : 2)}>Toggle</button>
+    </>)
+
 }
 export default PanelB; 
